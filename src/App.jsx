@@ -1,4 +1,5 @@
 import React from "react";
+import { HashRouter as Router } from "react-router-dom"; // wrap app in Router
 import BreathCircle from "./ui/BreathCircle";
 import Hole from "./ui/Hole";
 import HeaderTitle from "./ui/HeaderTitle";
@@ -8,14 +9,13 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import ContactInfo from "./components/ContactInfo";
 import Particles from "./components/Particles";
+import Services from "./components/Services";
 
 import "./index.css";
-import Services from "./components/Services";
 
 const App = () => {
   return (
-    
-    <>
+    <Router>
       {/* Particles Background */}
       <div style={{ width: "100%", height: "100vh", position: "fixed", top: 0, left: 0, zIndex: 0 }}>
         <Particles
@@ -29,9 +29,7 @@ const App = () => {
           disableRotation={false}
         />
       </div>
-      
- 
- 
+
       {/* Main Content */}
       <main className="relative z-10">
         {/* Landing section */}
@@ -64,9 +62,7 @@ const App = () => {
         {/* Footer */}
         <Footer />
       </main>
-
-      
-    </>
+    </Router>
   );
 };
 
