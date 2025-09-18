@@ -1,8 +1,8 @@
 import React from "react";
-import { HashRouter as Router } from "react-router-dom"; // wrap app in Router
+import { HashRouter as Router } from "react-router-dom";
 import BreathCircle from "./ui/BreathCircle";
-import Hole from "./ui/Hole";
 import HeaderTitle from "./ui/HeaderTitle";
+import Hole from "./ui/Hole";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Router>
       {/* Particles Background */}
-      <div style={{ width: "100%", height: "100vh", position: "fixed", top: 0, left: 0, zIndex: 0 }}>
+      <div className="fixed top-0 left-0 w-full h-full -z-10">
         <Particles
           particleColors={["#ffffffc1", "#ffffffc4"]}
           particleCount={100}
@@ -32,34 +32,29 @@ const App = () => {
 
       {/* Main Content */}
       <main className="relative z-10">
-        {/* Landing section */}
-        <section id="home" className="section__wrapper">
+        <section id="home" className="section__wrapper relative">
           <HeaderTitle />
           <BreathCircle />
         </section>
 
-        {/* About section */}
         <About />
-        <section id="services" className="section__wrapper">
+
+        <section id="services" className="section__wrapper relative">
           <Services />
         </section>
 
-        {/* Skills section */}
-        <section id="skills" className="section__wrapper">
+        <section id="skills" className="section__wrapper relative">
           <Skills />
         </section>
 
-        {/* Projects section */}
-        <section id="projects" className="section__wrapper">
+        <section id="projects" className="section__wrapper relative">
           <Projects />
         </section>
 
-        {/* Contact section */}
-        <section id="contact" className="section__wrapper">
+        <section id="contact" className="section__wrapper relative">
           <ContactInfo />
         </section>
 
-        {/* Footer */}
         <Footer />
       </main>
     </Router>

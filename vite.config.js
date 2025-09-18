@@ -1,8 +1,8 @@
-// vite.config.js
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// Replace `Maha-portfolio` with your repo name
 export default defineConfig({
   plugins: [react()],
-  base: '/Maha-portfolio/', // Match your new repo name exactly
-});
+  base: '/Maha-portfolio/', 
+})
