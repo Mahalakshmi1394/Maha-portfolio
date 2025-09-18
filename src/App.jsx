@@ -2,7 +2,6 @@ import React from "react";
 import { HashRouter as Router } from "react-router-dom";
 import BreathCircle from "./ui/BreathCircle";
 import HeaderTitle from "./ui/HeaderTitle";
-import Hole from "./ui/Hole";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -17,41 +16,49 @@ const App = () => {
   return (
     <Router>
       {/* Particles Background */}
-      <div className="fixed top-0 left-0 w-full h-full -z-10">
-        <Particles
-          particleColors={["#ffffffc1", "#ffffffc4"]}
-          particleCount={100}
-          particleSpread={10}
-          speed={0.8}
-          particleBaseSize={10}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-      </div>
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+  <Particles
+    particleColors={["#ffffffc1", "#ffffffc4"]}
+    particleCount={50}
+    particleSpread={10}
+    speed={0.5}
+    particleBaseSize={3}
+    moveParticlesOnHover={true}
+    alphaParticles={false}
+    disableRotation={false}
+  />
+</div>
 
       {/* Main Content */}
       <main className="relative z-10">
-        <section id="home" className="section__wrapper relative">
+        {/* Home / Landing Section */}
+        <section id="home" className="section__wrapper relative text-black min-h-screen flex flex-col justify-center">
           <HeaderTitle />
           <BreathCircle />
         </section>
 
-        <About />
+        {/* About Section */}
+        <section className="section__wrapper relative text-black">
+          <About />
+        </section>
 
-        <section id="services" className="section__wrapper relative">
+        {/* Services Section */}
+        <section id="services" className="section__wrapper relative text-black">
           <Services />
         </section>
 
-        <section id="skills" className="section__wrapper relative">
+        {/* Skills Section */}
+        <section id="skills" className="section__wrapper relative text-black">
           <Skills />
         </section>
 
-        <section id="projects" className="section__wrapper relative">
+        {/* Projects Section */}
+        <section id="projects" className="section__wrapper relative text-black">
           <Projects />
         </section>
 
-        <section id="contact" className="section__wrapper relative">
+        {/* Contact Section */}
+        <section id="contact" className="section__wrapper relative text-black">
           <ContactInfo />
         </section>
 

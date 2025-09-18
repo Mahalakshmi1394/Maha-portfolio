@@ -1,14 +1,10 @@
 import React, { useRef, useEffect } from "react";
 
 const Particles = ({
-  particleColors = ['#ffffff'],
-  particleCount = 50,
-  particleSpread = 10,
-  speed = 0.8,
-  particleBaseSize = 10,
-  moveParticlesOnHover = true,
-  alphaParticles = false,
-  disableRotation = false,
+  particleColors = ['#ffffffc1', '#ffffffc4'], 
+  particleCount = 50, 
+  speed = 0.8, 
+  particleBaseSize = 6
 }) => {
   const canvasRef = useRef();
 
@@ -22,7 +18,7 @@ const Particles = ({
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * (particleBaseSize / 10) + 1,
+        radius: Math.random() * particleBaseSize + 1,
         color: particleColors[Math.floor(Math.random() * particleColors.length)],
         dx: Math.cos(angle) * speed,
         dy: Math.sin(angle) * speed,
@@ -38,12 +34,10 @@ const Particles = ({
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach((p) => {
+      particles.forEach(p => {
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2, false);
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
-        ctx.globalAlpha = alphaParticles ? 0.5 : 1;
         ctx.fill();
 
         p.x += p.dx;
@@ -66,23 +60,23 @@ const Particles = ({
     animate();
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [
-    particleColors,
-    particleCount,
-    particleSpread,
-    speed,
-    particleBaseSize,
-    moveParticlesOnHover,
-    alphaParticles,
-    disableRotation,
-  ]);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [particleColors, particleCount, speed, particleBaseSize]);
 
   return (
-    <canvas ref={canvasRef} style={{ display: "block", position: "fixed", top: 0, left: 0, zIndex: -1, width: "100%", height: "100%" }} />
+    <canvas
+      ref={canvasRef}
+      style={{
+        display: "block",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 0,   // <-- Changed to 0 so it appears behind content
+        width: "100%",
+        height: "100%",
+        pointerEvents: "none",
+      }}
+    />
   );
 };
 
