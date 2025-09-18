@@ -22,11 +22,11 @@ const About = () => {
             <span className="blue">Mahalakshmi</span>
           </h1>
           <p>
-            I am Mahalakshmi U, a Final year Electronics and Communication Engineering student with a Minor in Data Science at Saveetha Engineering College.
-            I have a strong interest in programming, with skills in Python, Java, and a solid understanding of data structures and algorithms.
-            I am experienced in full stack development, building both front-end and back-end applications.
-            A fast learner and effective communicator, I am passionate about solving problems and continuously improving my skills.
-            I enjoy working on challenging projects and aim to contribute to innovative and impactful solutions.
+            Hi, I am Mahalakshmi U, a final-year Electronics and Communication Engineering student with a Minor in Data Science and Analytics at Saveetha Engineering College.
+I am passionate about technology and problem-solving, with a growing interest in full-stack development and data science.
+Currently, I am exploring data science and machine learning, which has broadened my perspective on building intelligent and impactful solutions.
+I see myself as a fast learner, effective communicator, and team player, always eager to embrace new technologies.
+My ultimate goal is to contribute to innovative projects that create real-world impact.
           </p>
         </div>
 

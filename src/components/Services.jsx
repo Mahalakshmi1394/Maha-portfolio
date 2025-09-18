@@ -13,7 +13,7 @@ export default function Services() {
     },
     {
       id: 2,
-      title: "AI/ML Engineering",
+      title: "AI/ML/DataScience",
       description: "Developing intelligent systems with TensorFlow and PyTorch. Specializing in computer vision, NLP, and predictive modeling to create automated decision-making solutions.",
       icon: <FaRobot />,
       color: "from-purple-500 to-pink-600",
@@ -21,7 +21,7 @@ export default function Services() {
     },
     {
       id: 3,
-      title: "Data Science",
+      title: "Data Analyst",
       description: "Extracting actionable insights through statistical modeling and machine learning. Expertise in Python, data visualization, and building analytical pipelines for business intelligence.",
       icon: <FaChartLine />,
       color: "from-teal-500 to-emerald-600",
