@@ -16,6 +16,27 @@ import Services from "./components/Services";
 import "./index.css";
 
 const App = () => {
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const sections = document.querySelectorAll(
+      ".section__wrapper, .skills-section, .projects-section"
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
   return (
     <Router>
       {/* Particles Background */}

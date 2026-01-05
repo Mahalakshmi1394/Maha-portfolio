@@ -272,21 +272,4 @@ export const socialHandles = [
 
 
 // Place this in your main JS file or inside a <script> tag
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollSections = document.querySelectorAll(
-    '.section__wrapper, .skills-section, .projects-section'
-  );
-  const observer = new window.IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          // Uncomment next line to animate only once and not reset if scrolled out
-          // observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.18 }
-  );
-  scrollSections.forEach(section => observer.observe(section));
-});
+
