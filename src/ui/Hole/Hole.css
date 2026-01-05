@@ -4,7 +4,7 @@
   background: var(--color-ui-1);
   border-radius: 50%;
   position: absolute;
-  bottom: 377px; /* Half inside about__card */
+  bottom: 432px; /* Half inside about__card */
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
