@@ -27,9 +27,8 @@ const skillsData = {
     { name: 'Scikit-learn', icon: <SiScikitlearn /> },
     { name: 'TensorFlow', icon: <SiTensorflow /> },
     { name: 'Keras', icon: <SiKeras /> },
-    { name: 'PyTorch', icon: <SiPytorch /> },
     { name: 'Neural Networks', icon: <FaBrain /> },
-    { name: 'CNN', icon: <FaBrain /> },
+    { name: 'Deep Learning', icon: <FaBrain /> },
     { name: 'Jupyter Notebook', icon: <SiJupyter /> },
   ],
   programming: [
@@ -49,7 +48,9 @@ const skillsData = {
 const Skills = () => {
   return (
     <section className="skills-section" id="skills">
-      <h2 className="skills-title">My Skills</h2>
+      <div style={{ textAlign: "center" }}>
+        <h2 className="skills-title">My Skills</h2>
+      </div>
 
       <div className="skills-layout-container">
         {/* Top Row: Full Stack (Left) + Data Science (Right) */}

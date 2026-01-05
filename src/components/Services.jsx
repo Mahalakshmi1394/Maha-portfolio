@@ -3,31 +3,35 @@ import { motion } from "framer-motion";
 
 export default function Services() {
   const services = [
-    {
-      id: 1,
-      title: "Web Development",
-      description: "Building responsive, high-performance websites and web apps using modern stacks like React, Next.js, and Node.js. Focused on clean code, scalability, and pixel-perfect UI implementation.",
-      icon: <FaCode />,
-      color: "from-blue-500 to-indigo-600",
-      bgGlow: "bg-blue-900/30"
-    },
-    {
-      id: 2,
-      title: "AI/ML/DataScience",
-      description: "Developing intelligent systems with TensorFlow and PyTorch. Specializing in computer vision, NLP, and predictive modeling to create automated decision-making solutions.",
-      icon: <FaRobot />,
-      color: "from-purple-500 to-pink-600",
-      bgGlow: "bg-purple-900/30"
-    },
-    {
-      id: 3,
-      title: "Data Analyst",
-      description: "Extracting actionable insights through statistical modeling and machine learning. Expertise in Python, data visualization, and building analytical pipelines for business intelligence.",
-      icon: <FaChartLine />,
-      color: "from-teal-500 to-emerald-600",
-      bgGlow: "bg-teal-900/30"
-    }
-  ];
+  {
+    id: 1,
+    title: "Web Development",
+    description:
+      "Building responsive and user-friendly web applications using HTML, CSS, JavaScript, Bootstrap, and the MERN stack. Focused on clean code, structured components, and smooth user experience.",
+    icon: <FaCode />,
+    color: "from-blue-500 to-indigo-600",
+    bgGlow: "bg-blue-900/30"
+  },
+  {
+    id: 2,
+    title: "AI & Deep Learning",
+    description:
+      "Exploring artificial intelligence and deep learning concepts through neural networks. Working with Python-based frameworks to understand model training, evaluation, and applications in real-world scenarios.",
+    icon: <FaRobot />,
+    color: "from-purple-500 to-pink-600",
+    bgGlow: "bg-purple-900/30"
+  },
+  {
+    id: 3,
+    title: "Data Science",
+    description:
+      "Analyzing and visualizing data using Python libraries such as NumPy, Pandas, Matplotlib, and Scikit-learn. Focused on data preprocessing, insights generation, and applying machine learning techniques.",
+    icon: <FaChartLine />,
+    color: "from-teal-500 to-emerald-600",
+    bgGlow: "bg-teal-900/30"
+  }
+];
+
 
   return (
     <div className="min-h-screen bg-[#var(--color-ui-2)] flex flex-col items-center justify-center px-4 md:px-8 py-12 md:py-16">
@@ -86,7 +90,7 @@ export default function Services() {
 
     {/* Content */}
     <div className="relative z-10 h-full flex flex-col">
-      <h3 className="text-2xl font-bold mb-4">
+      <h3 className="text-2xl font-bold mb-4 pr-16">
         <span className={`text-transparent bg-clip-text bg-gradient-to-r ${service.color}`}>
           {service.title}
         </span>

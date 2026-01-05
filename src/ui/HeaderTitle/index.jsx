@@ -116,15 +116,15 @@ const HeaderTitle = () => {
 
               <div className="stats-row">
                 <div className="stat-item">
-                  <div className="stat-number">35+</div>
+                  <div className="stat-number">15+</div>
                   <div className="stat-label">Workshops</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">10+</div>
+                  <div className="stat-number">3+</div>
                   <div className="stat-label">Hackathons</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">50+</div>
+                  <div className="stat-number">10+</div>
                   <div className="stat-label">Certifications</div>
                 </div>
               </div>
